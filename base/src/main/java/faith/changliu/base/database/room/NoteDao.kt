@@ -1,5 +1,6 @@
 package faith.changliu.base.database.room
 
+import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*
 import faith.changliu.base.database.Note
 
@@ -13,7 +14,7 @@ interface NoteDao {
 	fun insertAll(notes: List<Note>)
 
 	@Query("SELECT * FROM notes")
-	fun getAll(): List<Note>
+	fun getAll(): LiveData<List<Note>>
 
 	@Query("SELECT * FROM notes WHERE id=:id")
 	fun getNoteByID(id: String): Note

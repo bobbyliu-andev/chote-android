@@ -22,6 +22,10 @@ android {
     }
 }
 
+androidExtensions {
+    experimental = true
+}
+
 dependencies {
     api 'com.android.support:appcompat-v7:27.1.1'
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -38,4 +42,6 @@ dependencies {
     // dagger 2
     api "com.google.dagger:dagger:$versions.dagger"
     kapt "com.google.dagger:dagger-compiler:$versions.dagger"
+    // lottie
+    api "com.airbnb.android:lottie:2.5.5"
 }
