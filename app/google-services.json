@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1034150341458",
+    "firebase_url": "https://chote-dev.firebaseio.com",
+    "project_id": "chote-dev",
+    "storage_bucket": "chote-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034150341458:android:954b534fa59c375e",
+        "android_client_info": {
+          "package_name": "faith.changliu.chote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034150341458-ifk051p0a806jlsmia75l8klehmd539i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn2AFKp1_Mr0m5G9MRt-ZBLG6nloGq0gk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
