@@ -1,24 +1,25 @@
 package faith.changliu.chote
 
+import android.arch.persistence.room.Room
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
+import faith.changliu.base.database.Note
+import faith.changliu.base.database.room.RoomDB
 
 import org.junit.Test
 import org.junit.runner.RunWith
 
 import org.junit.Assert.*
+import java.util.*
 
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 @RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
+class DatabaseTest {
 	@Test
-	fun useAppContext() {
-		// Context of the app under test.
+	fun testDatabaseInit() {
 		val appContext = InstrumentationRegistry.getTargetContext()
-		assertEquals("faith.changliu.chote", appContext.packageName)
+		val testInstance = Room.inMemoryDatabaseBuilder(appContext, RoomDB::class.java).build()
+		testInstance.noteDao.insertNote(Note("1001", "Test Agent", Date(), "Test Memo"))
+		val noteFromDB = testInstance.noteDao.getNoteByID("1001")
+		assertEquals("1001", noteFromDB.id)
 	}
 }

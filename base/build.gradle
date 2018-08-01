@@ -27,10 +27,6 @@ dependencies {
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api 'com.android.support.constraint:constraint-layout:1.1.2'
     api 'com.android.support:design:27.1.1'
-    // test
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     // viewModel and liveData
     api "android.arch.lifecycle:extensions:$versions.lifecycle"
     api "android.arch.persistence.room:runtime:$versions.lifecycle"
