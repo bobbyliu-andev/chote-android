@@ -3,6 +3,7 @@ package faith.changliu.base.utils
 import faith.changliu.base.widgets.LoadingDialog
 import kotlinx.coroutines.experimental.android.UI
 import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.experimental.suspendCancellableCoroutine
 import kotlin.coroutines.experimental.suspendCoroutine
 
 fun tryBlock(loadingDialog: LoadingDialog? = null, block: suspend () -> Unit) {
@@ -21,7 +22,7 @@ fun tryBlock(loadingDialog: LoadingDialog? = null, block: suspend () -> Unit) {
 }
 
 // callback wrapper
-suspend fun <T> load() = suspendCoroutine<T> { cont ->
+suspend fun <T> load() = suspendCancellableCoroutine<T> { cont ->
 	// resumeWithException
 	// resume
 }

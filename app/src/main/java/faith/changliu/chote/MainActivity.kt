@@ -10,7 +10,6 @@ import faith.changliu.base.database.Note
 import faith.changliu.base.database.viewModels.MainViewModel
 import faith.changliu.base.utils.toast
 import faith.changliu.base.widgets.LoadingDialog
-
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -44,8 +43,17 @@ class MainActivity : AppCompatActivity() {
 
 	override fun onOptionsItemSelected(item: MenuItem): Boolean {
 		return when (item.itemId) {
-			R.id.action_settings -> true
+			R.id.action_settings -> {
+				testFun()
+				true
+			}
 			else -> super.onOptionsItemSelected(item)
 		}
 	}
+
+	private fun testFun() {
+
+	}
+
+
 }
